@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Bird WEB using Laravel</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -23,10 +23,10 @@
         @viteReactRefresh
         @vite(['resources/css/app.css', 'resources/js/app.jsx'])
         -->
+
     </head>
     <body class="font-sans antialiased dark:bg-black dark:text-white/50">
         <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-            <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" alt="Laravel background" />
             <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
                 <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
                     <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
@@ -63,7 +63,27 @@
                         @endif
                     </header>
 
-                    <main class="mt-6">
+                    <main oclass="mt-6">
+                        <div id="ptitle" align='center' style="background-color: antiquewhite; padding: 2em">
+                          <h1 id="pagename" style="font-size: 48px;">
+                               オガサワラカワラヒワ検出プログラム </h1>
+                        </div>
+                        <div align="center" id="videoregion" style="padding: 2em;">
+                            <video controls autoplay id="mainVideo" style=" width: 65%; ">
+                                <source src="yolo/video/abc.mp4" id="mainVideoSource" />
+                            </video>
+                        </div>
+                        <div align="center">
+                            <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                <p style="">検出</p></button>
+                            <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                <p style="">解析</p></button>
+                            <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                <p style="">Download</p></button>
+                        </div>
+                        <div>
+                            <div id="bbutton"></div>
+                        </div>
                     </main>
 
                     <footer class="py-16 text-center text-sm text-black dark:text-white/70">
