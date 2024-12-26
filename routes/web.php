@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PythonYoloController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -11,6 +12,7 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/python', [PythonYoloController::class, 'runPythonScript']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
