@@ -30,4 +30,21 @@ class PythonYoloController extends Controller
         return view('python_yolo', ['result' => $result]);
     }
 
+    public function runBashScript()
+    {
+        $bashScriptPath = base_path('app/Python/yolo.sh');
+
+        $output = null;
+        $resultCode = null;
+
+        exec("bash $bashScriptPath", $output, $resultCode);
+
+        if ($resultCode === 0) {
+            $result = implode("\n", $output);  // 出力を文字列に変換
+        } else {
+            $result = "Python script failed with result code: $resultCode";
+        }
+
+        return view('python_yolo', ['result' => $result]);
+    }
 }
