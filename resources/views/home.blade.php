@@ -75,7 +75,7 @@
                             </video>
                         </div>
                         <div align="center">
-                            <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="location.href='{{url('/detectbird') }}' ">
                                 <p style="">検出</p></button>
                             <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                                 <p style="">解析</p></button>

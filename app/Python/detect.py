@@ -1,4 +1,4 @@
-from ultralytics import YOLO 
+from ultralytics import YOLO
 import time
 import datetime
 import os
@@ -24,6 +24,7 @@ def saveVideoFile():
     SAVE_DIR = "outputs"
     VIDEO_DIR = "runs/detect/track"
     VIDEO_NAME = SAVE_DIR + '/output.avi'
+    MP4_NAME = SAVE_DIR + '/output.mp4'
 
     if not os.path.exists(SAVE_DIR):
         os.makedirs(SAVE_DIR)
@@ -48,11 +49,11 @@ def saveVideoFile():
 time1 = time.time()
 dt_start = datetime.datetime.now()
 print('YOLO starts at ' + str(dt_start))
-results = detection_model.track(source=source_path, save=save_video, 
+results = detection_model.track(source=source_path, save=save_video,
                                 #, device=0, save=False,
 #                                conf=float(values['detection_conf_thres']),
 #                                iou=float(values['detection_iou_thres']),
-#                                imgsz=320,
+                                imgsz=320,
                                 show=False,
                                 conf=0.25,
                                 iou=0.7,
