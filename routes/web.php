@@ -13,7 +13,8 @@ Route::get('/', function () {
 });
 
 Route::get('/python', [PythonYoloController::class, 'runPythonScript']);
-Route::get('/detectbird', [PythonYoloController::class, 'runBashScript']);
+Route::get('/detectbird', [PythonYoloController::class, 'runDetectScript']);
+Route::get('/analyzebird', [PythonYoloController::class, 'runAnalyzeScript']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

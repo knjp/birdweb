@@ -30,9 +30,9 @@ class PythonYoloController extends Controller
         return view('python_yolo', ['result' => $result]);
     }
 
-    public function runBashScript()
+    public function runDetectScript()
     {
-        $bashScriptPath = base_path('app/Python/yolo.sh');
+        $bashScriptPath = base_path('app/Python/yolo_detect.sh');
 
         $output = null;
         $resultCode = null;
@@ -45,6 +45,24 @@ class PythonYoloController extends Controller
             $result = "Python script failed with result code: $resultCode";
         }
 
-        return view('python_yolo', ['result' => $result]);
+        return view('python_detect', ['result' => $result]);
+    }
+
+    public function runAnalyzeScript()
+    {
+        $bashScriptPath = base_path('app/Python/yolo_analyze.sh');
+
+        $output = null;
+        $resultCode = null;
+
+        exec("bash $bashScriptPath", $output, $resultCode);
+
+        if ($resultCode === 0) {
+            $result = implode("\n", $output);  // 出力を文字列に変換
+        } else {
+            $result = "Python script failed with result code: $resultCode";
+        }
+
+        return view('python_analyze', ['result' => $result]);
     }
 }
