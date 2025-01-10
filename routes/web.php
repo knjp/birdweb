@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PythonYoloController;
+use App\Http\Controllers\AnalyzeController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -11,6 +12,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+
+Route::resource('fileupload', AnalyzeController::class);
 
 Route::get('/python', [PythonYoloController::class, 'runPythonScript']);
 Route::get('/detectbird', [PythonYoloController::class, 'runDetectScript']);
