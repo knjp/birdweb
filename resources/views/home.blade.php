@@ -71,7 +71,7 @@
                         </div>
                         <div align="center" id="videoregion" style="padding: 2em;">
                             <video controls autoplay id="mainVideo" style=" width: 65%; ">
-                                <source src="yolo/video/abc.mp4" id="mainVideoSource" />
+                                <source src="storage/yolo/upload/upload_bird_file.mp4" id="mainVideoSource" />
                             </video>
                         </div>
                         <div align="center">
