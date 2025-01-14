@@ -6,7 +6,7 @@
 <body>
     <pre>{{ $result }}</pre>
     <div align="center" id="videoregion" style="padding: 2em;">
-        <img src="yolo/resultsSuper.jpg" id="resultsSuper" />
+        <img src="storage/yolo/resultsSuper.jpg" id="resultsSuper" />
     </div>
 </body>
 </html>

@@ -8,13 +8,14 @@ import csv
 import argparse
 
 videoname = 'video/abc.mp4'
+videoname = 'upload/upload_bird_file.mp4'
 
 parser = argparse.ArgumentParser(description='Detect birds from a video.')
 parser.add_argument('videofilename', help='Name of the video file', nargs='?', default=videoname)
 parser.add_argument('--save_video', help='Save the video file', action='store_true')
 args = parser.parse_args()
 
-os.chdir('/usr/local/www/birdweb/public/yolo')
+os.chdir('/usr/local/www/birdweb/public/storage/yolo')
 dirbase = './'
 detection_model = YOLO('model/best.pt')
 source_path = os.path.abspath(args.videofilename)
