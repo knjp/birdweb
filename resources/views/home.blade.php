@@ -71,7 +71,7 @@
                         </div>
                         <div align="center" id="videoregion" style="padding: 2em;">
                             <video controls autoplay id="mainVideo" style=" width: 65%; ">
-                                <source src="storage/yolo/upload/upload_bird_file.mp4" id="mainVideoSource" />
+                                <source src="storage/yolo/upload/bird_file.mp4" id="mainVideoSource" />
                             </video>
                         </div>
                         <div align="center">
@@ -81,6 +81,8 @@
                                 <p style="">解析</p></button>
                             <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="location.href='{{url('/fileupload') }}' ">
                                 <p style="">File Upload</p></button>
+                            <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="location.href='{{url('/downloadcsv') }}' ">
+                                <p style="">File Download</p></button>
                         </div>
                         <div>
                             <div id="bbutton"></div>

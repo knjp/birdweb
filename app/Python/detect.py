@@ -8,7 +8,7 @@ import csv
 import argparse
 
 videoname = 'video/abc.mp4'
-videoname = 'upload/upload_bird_file.mp4'
+videoname = 'upload/bird_file.mp4'
 
 parser = argparse.ArgumentParser(description='Detect birds from a video.')
 parser.add_argument('videofilename', help='Name of the video file', nargs='?', default=videoname)
