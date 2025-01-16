@@ -15,6 +15,7 @@ Route::get('/', function () {
 
 Route::resource('fileupload', AnalyzeController::class);
 Route::get('downloadcsv', [AnalyzeController::class, 'downloadCSV']);
+//Route::get('detectingbirds', [AnalyzeController::class, 'jumpToDetect']);
 
 Route::get('/python', [PythonYoloController::class, 'runPythonScript']);
 Route::get('/detectbird', [PythonYoloController::class, 'runDetectScript']);

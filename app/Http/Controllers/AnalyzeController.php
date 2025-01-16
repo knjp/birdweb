@@ -13,7 +13,7 @@ class AnalyzeController extends Controller
     public function store(Request $request){
         //dd($request->all());
         $request->file('file')->storeAs('./yolo/upload/', 'bird_file.mp4', ['disk' => 'public']);
-        return redirect('/detectbird');
+        return view('waitfordetect');
     }
 
     public function downloadCSV(){
