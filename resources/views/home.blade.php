@@ -75,14 +75,14 @@
                             </video>
                         </div>
                         <div align="center">
+                            <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="location.href='{{url('/fileupload') }}' ">
+                                <p style="">動画アップロード</p></button>
                             <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="location.href='{{url('/detectbird') }}' ">
                                 <p style="">検出</p></button>
                             <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="location.href='{{url('/analyzebird') }}' ">
                                 <p style="">解析</p></button>
-                            <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="location.href='{{url('/fileupload') }}' ">
-                                <p style="">File Upload</p></button>
                             <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="location.href='{{url('/downloadcsv') }}' ">
-                                <p style="">File Download</p></button>
+                                <p style="">ダウンロード</p></button>
                         </div>
                         <div>
                             <div id="bbutton"></div>
