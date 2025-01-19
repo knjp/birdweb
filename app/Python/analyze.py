@@ -10,7 +10,12 @@ from matplotlib import colormaps as cm2
 from PIL import Image
 import cv2
 
-basedir = '/usr/local/www/birdweb/public/storage/'
+bird_path = os.environ.get('BIRD_PATH', '/tmp')
+if bird_path == '/tmp':
+    basedir = "";
+    sys.exit(155)
+else:
+    basedir = bird_path + '/public/storage/'
 os.chdir(basedir)
 dataFileName = 'yolo/results.csv'
 csvFileName = 'yolo/birdstatus.csv'

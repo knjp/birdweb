@@ -15,7 +15,12 @@ parser.add_argument('videofilename', help='Name of the video file', nargs='?', d
 parser.add_argument('--save_video', help='Save the video file', action='store_true')
 args = parser.parse_args()
 
-os.chdir('/usr/local/www/birdweb/public/storage/yolo')
+bird_path = os.environ.get('BIRD_PATH', '/tmp')
+if bird_path == '/tmp':
+    sys.exit(155)
+else:
+    bpath = os.environ['BIRD_PATH'] + '/public/storage/yolo'
+os.chdir(bpath)
 dirbase = './'
 detection_model = YOLO('model/best.pt')
 source_path = os.path.abspath(args.videofilename)
