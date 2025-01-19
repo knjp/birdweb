@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PDIR=$BIRD_PATH/app/Python
-export YOLO_CONFIG_DIR=/usr/local/www/Ultralytics
+export YOLO_CONFIG_DIR=$YOLO_CONF_PATH
 
 source $PDIR/venv/bin/activate
 #pip list
