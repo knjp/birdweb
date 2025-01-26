@@ -13,10 +13,10 @@
         </video>
     </div>
     <div align="center" id="videoregion" style="padding: 2em;">
-        <img src="storage/yolo/resultsSuper.jpg" id="resultsSuper" />
+        <img src="storage/yolo/figs/resultsSuper000.jpg" id="resultsSuper" />
     </div>
     <div align="center" id="videoregion" style="padding: 2em;">
-        <img src="storage/yolo/resultsFigTime.png" id="resultsTime" />
+        <img src="storage/yolo/figs/resultsFigTime.png" id="resultsTime" />
     </div>
     <div align="center">
         <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="location.href='{{url('/') }}' ">
