@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class PythonYoloController extends Controller
 {
@@ -63,6 +64,22 @@ class PythonYoloController extends Controller
             $result = "Python script failed with result code: $resultCode";
         }
 
-        return view('python_analyze', ['result' => $result]);
+        $directory = public_path('storage/yolo/figs');
+        $files = File::files($directory);
+
+        $images = [
+            'resultsSuper000.jpg',
+            'resultsSuper001.jpg',
+            'resultsSuper002.jpg',
+        ];
+
+        $images = [];
+        foreach ($files as $file) {
+            if(strpos($file->getFilename(), 'resultsSuper') !== false){
+                $images[] = $file->getFilename();
+            }
+        }
+
+        return view('python_analyze', ['result' => $result, 'images' => $images]);
     }
 }

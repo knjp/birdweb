@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Python Script Result 2025</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Script Result 2025 with Image</title>
+    <style>
+        .slider {
+            display: flex;
+            overflow-x: scroll;
+            white-space: nowrap;
+        }
+        .slider img {
+            max-height: 400px;
+            margin-right: 10px;
+        }
+    </style>
+
 </head>
 <body>
     <!--
@@ -12,9 +26,13 @@
             <source src="storage/yolo/upload/bird_file.mp4" id="mainVideoSource" />
         </video>
     </div>
-    <div align="center" id="videoregion" style="padding: 2em;">
-        <img src="storage/yolo/figs/resultsSuper000.jpg" id="resultsSuper" />
+
+    <div class="slider">
+        @foreach ($images as $image)
+            <img src="{{ asset('storage/yolo/figs/' . $image) }}" alt="Image">
+        @endforeach
     </div>
+
     <div align="center" id="videoregion" style="padding: 2em;">
         <img src="storage/yolo/figs/resultsFigTime.png" id="resultsTime" />
     </div>

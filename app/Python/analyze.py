@@ -17,6 +17,17 @@ if bird_path == '/tmp':
 else:
     basedir = bird_path + '/public/storage/'
 os.chdir(basedir)
+
+resultsdir = 'yolo/figs/'
+files = os.listdir(resultsdir)
+for file in files:
+    print(file)
+    if file.endswith('.jpg'):
+        file_path = os.path.join(resultsdir, file)
+        if os.path.exists(file_path):
+            os.remove(file_path)
+
+
 dataFileName = 'yolo/results.csv'
 csvFileName = 'yolo/birdstatus.csv'
 
